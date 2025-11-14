@@ -1,88 +1,61 @@
-import './globals.css'
+import "./globals.css";
 
 export const metadata = {
-  title: 'Digital Luxe Goddess | Self-Love Journals & Empowerment Products for Women',
-  description: 'Transform your life with empowering self-love journals, affirmations, and goddess energy tools. Digital products and physical journals for women seeking personal growth, manifestation, and feminine empowerment.',
-  keywords: 'self-love journal, goddess empowerment, women empowerment products, manifestation journal, affirmations for women, self-care journal, personal growth, feminine energy, digital journals, empowerment workbooks, mindfulness journal, gratitude journal',
-  authors: [{ name: 'Digital Luxe Goddess' }],
-  creator: 'Digital Luxe Goddess',
-  publisher: 'The Goddess Empowerment',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  title: "Digital Luxe Goddess Academy | Goddess Empowerment",
+  description:
+    "Digital Luxe Goddess Academy helps women build aligned digital income with boundaries, healing, and simple online systems. Serving Baton Rouge and clients across the United States.",
   openGraph: {
-    title: 'Digital Luxe Goddess | Self-Love Journals & Empowerment Products',
-    description: 'Premium self-love journals and empowerment tools for women who are ready to embrace their goddess energy and transform their lives.',
-    url: 'https://yourdomain.com',
-    siteName: 'Digital Luxe Goddess',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Digital Luxe Goddess - Empowerment Products',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
+    title: "Digital Luxe Goddess Academy | Goddess Empowerment",
+    description:
+      "Programs, journals, and resources for women rebuilding their life, money, and online presence — without oversharing or burning out.",
+    type: "website",
+    url: "https://your-vercel-domain.com"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Digital Luxe Goddess | Self-Love Journals & Empowerment',
-    description: 'Transform your life with empowering journals and goddess energy tools.',
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-  },
-}
+  metadataBase: new URL("https://your-vercel-domain.com")
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="canonical" href="https://yourdomain.com" />
-        <meta name="geo.region" content="US" />
-        <meta name="geo.placename" content="United States" />
+      <body>
+        {children}
+        {/* SEO: Structured data for Google */}
         <script
           type="application/ld+json"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Digital Luxe Goddess',
-              description: 'Empowering women through self-love journals and personal growth products',
-              url: 'https://yourdomain.com',
-              logo: 'https://yourdomain.com/logo.png',
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Digital Luxe Goddess Academy",
+              alternateName: "Goddess Empowerment",
+              url: "https://your-vercel-domain.com",
               sameAs: [
-                'https://instagram.com/digitalluxegoddess',
-                'https://tiktok.com/@digitalluxegoddess',
-                'https://beacons.ai/digitalluxegoddess',
+                "https://beacons.ai/digitalluxegoddess",
+                "https://shop.beacons.ai/digitalluxegoddess/55bb08a3-f5ae-4d8c-a513-b1795bbb944c",
+                "https://shop.beacons.ai/digitalluxegoddess/ee1e3726-952e-4f81-bbc6-2a70975855b8",
+                "https://the-goddess-empowerment.printify.me/"
+                // add Instagram / TikTok URLs here when you’re ready
               ],
-              contactPoint: {
-                '@type': 'ContactPoint',
-                contactType: 'Customer Service',
-                availableLanguage: 'English',
-              },
-            }),
+              areaServed: [
+                "Baton Rouge, Louisiana",
+                "Prairieville, Louisiana",
+                "Gonzales, Louisiana",
+                "Denham Springs, Louisiana",
+                "United States"
+              ],
+              description:
+                "Digital Luxe Goddess Academy offers empowerment education, digital products, 1:1 alignment mentorship, and creator resources for women building safe, sustainable online income.",
+              founder: {
+                "@type": "Person",
+                name: "Courtnei",
+                jobTitle: "Founder",
+                gender: "Female"
+              }
+            })
           }}
         />
-      </head>
-      <body>{children}</body>
+      </body>
     </html>
-  )
+  );
 }
