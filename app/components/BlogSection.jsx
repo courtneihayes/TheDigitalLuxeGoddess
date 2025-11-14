@@ -1,55 +1,64 @@
 const posts = [
   {
     title:
-      "How Baton Rouge Small Businesses Can Turn Instagram Followers Into Paying Clients",
-    slug: "baton-rouge-instagram-followers-to-clients",
-    audience: "Local service businesses",
-    outcome: "DM scripts + Beacons link strategy"
+      "Healing in Public Without Oversharing: Content Boundaries for Black Women Online",
+    slug: "healing-in-public-without-oversharing",
+    audience: "Black women creators, coaches, and service providers",
+    outcome:
+      "Learn how to share your story with intention, protect your peace, and still attract aligned clients."
+  },
+  {
+    title: "How to Build a Faceless Instagram That Still Feels Personal",
+    slug: "faceless-instagram-that-feels-personal",
+    audience: "Moms, survivors, and private creators who don’t want to show their face",
+    outcome:
+      "Step-by-step ways to use B-roll, text, and voiceovers to grow without sacrificing safety or anonymity."
   },
   {
     title:
-      "The Simple Content System I Use for Airbnb Hosts in Baton Rouge & Prairieville",
-    slug: "airbnb-host-content-system-baton-rouge",
-    audience: "Airbnb & short-term rental hosts",
-    outcome: "Weekly posting rhythm + guest experience"
+      "From Survival Mode to Digital Income: Turning Your Lessons Into Ethical Digital Products",
+    slug: "turn-lessons-into-ethical-digital-products",
+    audience: "Women who have a story, a skill, or a testimony and want to monetize it responsibly",
+    outcome:
+      "A framework for creating offers (courses, guides, templates) without exploiting your trauma."
   },
   {
     title:
-      "No Email List? No Problem. How to Sell Directly From TikTok and Beacons",
-    slug: "sell-from-tiktok-and-beacons",
-    audience: "Creators & UGC beginners",
-    outcome: "DM + Beacons funnel"
-  },
-  {
-    title: "Content Boundaries for Black Women Building Online Businesses",
-    slug: "content-boundaries-for-black-women",
-    audience: "Black women entrepreneurs",
-    outcome: "Safety, consent, and pricing"
+      "The Digital Luxe Stack: How I’d Go From $0 to $10K Using Beacons, Social Media & Simple Systems",
+    slug: "digital-luxe-stack-0-to-10k",
+    audience: "Early-stage creators & service providers ready for consistent digital income",
+    outcome:
+      "A clear breakdown of offers, price points, and content needed to hit your first $10K month."
   },
   {
     title:
-      "Evergreen Content Ideas for Baton Rouge Cleaners, Beauty Pros, and Service Providers",
-    slug: "evergreen-content-ideas-baton-rouge",
-    audience: "Local service providers",
-    outcome: "Evergreen SEO blog & Reels ideas"
+      "Soft Life, Strong Boundaries: Systems for Single Moms & Creators Building a Business",
+    slug: "soft-life-strong-boundaries-systems",
+    audience: "Single moms, co-parents, and women rebuilding after toxic dynamics",
+    outcome:
+      "Daily routines, communication boundaries, and business systems that protect your energy and income."
   },
   {
     title:
-      "How to Use One Beacons Page as Your Whole Offer Ecosystem (Without Confusing People)",
-    slug: "beacons-offer-ecosystem",
-    audience: "Multi-offer creators",
-    outcome: "Offer stack & Beacons layout"
+      "Journaling as a Business Strategy: Using The Goddess Empowerment Journals to Plan Content & Revenue",
+    slug: "journaling-as-business-strategy",
+    audience: "Women who process through writing and want to turn that into content and offers",
+    outcome:
+      "Prompts to go from brain-dump to content calendar to digital products that live on Beacons."
   }
 ];
 
 export default function BlogSection() {
   return (
     <section id="blog">
-      <h2>Evergreen Content Hub</h2>
-      <p style={{ color: "#9ca3af", fontSize: "0.9rem" }}>
-        Each topic below can be a full blog post, carousel, or TikTok that sends
-        people back here or straight to your Beacons.
+      <h2>Digital Luxe Goddess Blog</h2>
+      <p style={{ color: "#9ca3af", fontSize: "0.9rem", maxWidth: "40rem" }}>
+        These are the core topics of the Digital Luxe Goddess Academy: healing,
+        boundaries, digital income, and content that doesn't exploit your story.
+        Each headline can become a full blog post, carousel, TikTok, or live stream
+        That points back to your Beacons offers.
       </p>
+
       <div
         style={{
           display: "grid",
@@ -63,18 +72,3 @@ export default function BlogSection() {
             className="card"
           >
             <h3 style={{ marginTop: 0 }}>{post.title}</h3>
-            <p style={{ color: "#9ca3af", fontSize: "0.85rem" }}>
-              <strong>For:</strong> {post.audience}
-            </p>
-            <p style={{ color: "#d1d5db", fontSize: "0.85rem" }}>
-              <strong>Outcome:</strong> {post.outcome}
-            </p>
-            <p style={{ color: "#6b7280", fontSize: "0.8rem" }}>
-              Slug: <code>{post.slug}</code>
-            </p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
